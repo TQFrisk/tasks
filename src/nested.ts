@@ -121,7 +121,16 @@ export function renameQuestionById(
     targetId: number,
     newName: string,
 ): Question[] {
-    return [];
+    return questions.map((question: Question): Question => {
+        if (question.id === targetId) {
+            return {
+                ...question,
+                name: newName,
+            };
+        }
+
+        return question;
+    });
 }
 
 /**
