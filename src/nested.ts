@@ -151,5 +151,29 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return [];
+    return questions.map((question: Question): Question => {
+        if (question.id !== targetId) {
+            return question;
+        }
+
+        let newOptions: string[];
+
+        if (targetOptionIndex === -1) {
+            newOptions = [...question.options, newOption];
+        } else {
+            newOptions = question.options.map(
+                (option: string, index: number): string => {
+                    if (index === targetOptionIndex) {
+                        return newOption;
+                    }
+                    return option;
+                },
+            );
+        }
+
+        return {
+            ...question,
+            options: newOptions,
+        };
+    });
 }
