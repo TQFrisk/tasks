@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import { ChangeType } from "./components/ChangeType";
-import { RevealAnswer } from "./components/RevealAnswer";
-import { TwoDice } from "./components/TwoDice";
-import { Counter } from "./components/Counter";
+// import { ChangeType } from "./components/ChangeType";
+// import { RevealAnswer } from "./components/RevealAnswer";
+// import { TwoDice } from "./components/TwoDice";
+// import { Counter } from "./components/Counter";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
-import { Button, Col, Container, Row } from "react-bootstrap";
+// import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): React.JSX.Element {
     return (
@@ -16,19 +16,19 @@ function App(): React.JSX.Element {
                 UM COS420 with React Hooks and TypeScript
             </header>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
             <ColoredBox></ColoredBox>
-            <hr></hr>
+            {/* <hr></hr>
             <Counter></Counter>
             <hr />
             <RevealAnswer></RevealAnswer>
             <hr />
             <TwoDice></TwoDice>
             <hr />
-            <ChangeType></ChangeType>
+            <ChangeType></ChangeType> */}
         </div>
     );
 }
